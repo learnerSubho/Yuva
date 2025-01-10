@@ -7,3 +7,4 @@ reportlab
 sqlparse
 typing_extensions
 tzdata
+gunicorn
