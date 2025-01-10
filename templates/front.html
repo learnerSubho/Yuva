@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Computer Knowledge Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #F9F9F9;
+        }
+
+        header {
+            background: #0078FF;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background: #005bb5;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('{% static "hero-bg.jpg" %}') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .btn-primary {
+            text-decoration: none;
+            background: #FF4500;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #E63900;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #0078FF;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        section ul li {
+            background: #F0F0F0;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            text-align: left;
+            color: #333;
+        }
+
+        .video-section {
+            background: #F0F8FF;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .video-section video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .footer-content a {
+            text-decoration: none;
+            color: #00FA9A;
+            transition: color 0.3s;
+        }
+
+        .footer-content a:hover {
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'logo.jpg' %}" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#announcements">Announcements</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/login" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="video-section">
+            <h2>Watch Our Introduction Video</h2>
+            <video autoplay loop controls>
+                <source src="{% static 'bg.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="hero">
+            <h1 style="color: brown">Welcome to</h1>
+            <h2>The Computer Knowledge Academy</h2>
+            <p>Empowering you with the best skills for a brighter future.</p>
+            <a href="/login" class="btn-primary">Get Started</a>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At <strong>The Computer Knowledge Academy</strong>, we provide top-notch training in various computer courses, helping students build a solid foundation in technology. With experienced mentors and a focus on practical skills, we ensure each student achieves their learning goals.</p>
+        </section>
+
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <ul>
+                <li><i class="fas fa-laptop"></i> Basic Computer Skills</li>
+                <li><i class="fas fa-globe"></i> E-Learning Modules</li>
+                <li><i class="fas fa-file-excel"></i> Advanced Excel</li>
+                <li><i class="fas fa-calculator"></i> Tally and Accounting</li>
+                <li><i class="fas fa-code"></i> Web Development</li>
+                <li><i class="fas fa-terminal"></i> Programming (Python, Java, and more)</li>
+                <li><i class="fas fa-paint-brush"></i> Photo Editing and Graphic Design</li>
+            </ul>
+            <p>All courses come with valuable certificates at affordable costs.</p>
+        </section>
+
+        <section id="announcements">
+            <h2>Announcements</h2>
+            <p style="font-size: 1.2rem;">Admissions are now open for all courses! Enroll today to secure your spot.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out to us for inquiries or support.</p>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: info@computeracademy.com</li>
+                <li><i class="fas fa-phone-alt"></i> Phone: 096476 82206</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: Brambhanpara, Haripur, Chanditala, Hooghly, Hugli, India, West Bengal</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 The Computer Knowledge Academy. All rights reserved.</p>
+            <p><a href="#privacy">Privacy Policy</a> | <a href="https://soumya-xd.github.io/pty/">Contact Us</a></p>
+        </div>
+    </footer>
+</body>
+</html>
